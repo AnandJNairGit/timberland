@@ -1,6 +1,5 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { ThemeProvider, createTheme } from "@mui/material";
@@ -10,7 +9,7 @@ const theme = createTheme({
   palette: {
     mode: "light",
     primary: {
-      main: "#33f030",
+      main: "#2ac728",
     },
     secondary: {
       main: "#FFFFFF",
