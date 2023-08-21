@@ -17,12 +17,17 @@ import { Link, useNavigate } from "react-router-dom";
 import { Container, Typography } from "@mui/material";
 import Row from "../common/Row";
 
+import logo from "../../assets/logo.png";
+import search from "../../assets/navbar/search.png";
+import profile from "../../assets/navbar/Profile.png";
+import menu from "../../assets/navbar/Menu.png";
+
 const drawerWidth = 240;
 
 function NavBar(props) {
-  const leftNavItems = ["Home", "About"];
+  const leftNavItems = ["About Us", "Our Products", "Contact Us"];
 
-  const leftNavRoutes = ["", "about"];
+  const leftNavRoutes = ["about", "products", "contact"];
 
   const { windowObj } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
@@ -130,7 +135,12 @@ function NavBar(props) {
                 width: "100%",
               }}
             >
-              <Typography>TIMBERLAND</Typography>
+              <Row>
+                <img src={logo} width="50px" />
+                <Typography sx={{ fontWeight: 600, color: "#318161" }}>
+                  Timberland
+                </Typography>
+              </Row>
 
               {/*NAV BUTTONS  */}
               <Box display="flex">
@@ -153,21 +163,24 @@ function NavBar(props) {
               </Box>
 
               {/* RIGHT NAV BUTTONS  */}
-              <Row sx={{ justifyContent: "center" }}>
-                <Box flexGrow={20} />
-                <Button
-                  
-                  sx={{
-                    color:"black",
-                    fontSize: navbuttonSize,
-                    fontWeight: "400",
-                  }}
-                >
-                  Sign In
-                </Button>
-                <Box flexGrow={1} />
-
-                <Button variant="contained">SignUp</Button>
+              <Row
+                sx={{
+                  justifyContent: "center",
+                  background: "#142E38",
+                  padding: "13px",
+                  paddingX: "30px",
+                  borderBottomLeftRadius: "10px",
+                }}
+              >
+                <IconButton>
+                  <img src={search} width="20px" />
+                </IconButton>
+                <IconButton>
+                  <img src={profile} width="20px" />
+                </IconButton>
+                <IconButton>
+                  <img src={menu} width="20px" />
+                </IconButton>
               </Row>
             </Box>
           </Container>

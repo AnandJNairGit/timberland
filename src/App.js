@@ -2,6 +2,8 @@ import NavBar from "./components/navbar";
 import About from "./pages/about";
 import { Route, Routes, useLocation } from "react-router-dom";
 import Home from "./pages/home";
+import Spacer from "./components/common/Spacer";
+import { Box } from "@mui/material";
 // import TeamDetails from "./pages/teamDetails";
 
 function App() {
@@ -12,6 +14,7 @@ function App() {
     <>
       <nav>
         <NavBar />
+       <Box sx={{marginTop:{ xs: 9, sm: 9, md: 9 }}}/>
       </nav>
       <Routes>
         <Route path="/" element={<Home />} />

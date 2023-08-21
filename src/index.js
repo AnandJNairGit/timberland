@@ -16,7 +16,7 @@ const theme = createTheme({
     },
   },
   typography: {
-    fontFamily: "Playfair Display, sans-serif",
+    fontFamily: "Open Sans, Poppins, sans-serif",
     textTransform: "none",
   },
   components: {
