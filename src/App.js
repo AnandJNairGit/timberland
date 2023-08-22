@@ -14,7 +14,7 @@ function App() {
     <>
       <nav>
         <NavBar />
-       <Box sx={{marginTop:{ xs: 9, sm: 9, md: 9 }}}/>
+        <Box sx={{ marginTop: { xs: 9, sm: 9, md: 9 } }} />
       </nav>
       <Routes>
         <Route path="/" element={<Home />} />
