@@ -92,7 +92,7 @@ function NavBar(props) {
         component="nav"
         sx={{
           // background: "linear-gradient(to bottom, #ffff,#ffff, rgba(255, 255, 255, 0))",
-          background: "#ffffff80",
+          background: "#D5EEC680",
           backdropFilter: "blur(10px)",
           position: "fixed",
           top: 0,
@@ -114,15 +114,34 @@ function NavBar(props) {
             }}
           >
             {/* <GradientText text="NFJ LABS" /> */}
-            <Typography>TIMBERLAND</Typography>
-            <IconButton
-              color="inherit"
-              aria-label="open drawer"
-              edge="start"
-              onClick={handleDrawerToggle}
+            <Row>
+              <img src={logo} width="50px" />
+              <Typography sx={{ fontWeight: 600, color: "#318161" }}>
+                Timberland
+              </Typography>
+            </Row>
+
+            <Row
+              sx={{
+                justifyContent: "center",
+                background: "#142E38",
+                padding: "13px",
+                paddingX: "30px",
+                borderBottomLeftRadius: "10px",
+                borderBottomRightRadius: "10px",
+
+              }}
             >
-              <MenuIcon />
-            </IconButton>
+              <IconButton>
+                <img src={search} width="20px" />
+              </IconButton>
+              <IconButton>
+                <img src={profile} width="20px" />
+              </IconButton>
+              <IconButton onClick={handleDrawerToggle}>
+                <img src={menu} width="20px" />
+              </IconButton>
+            </Row>
           </Box>
 
           <Container>

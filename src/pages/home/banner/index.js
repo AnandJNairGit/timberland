@@ -159,7 +159,7 @@ const Banner = () => {
       <Box
         sx={{
           backgroundImage:
-            "linear-gradient(to bottom right,#FED5C5 1%, #FFFFFF 20%,#D5EEC6, #FFFFFF 70%)",
+            "linear-gradient(to bottom,#D5EEC6 1%, #FFFFFF 70%,#D5EEC6, #FFFFFF 20%)",
           paddingY: { xs: 1, sm: 6 },
         }}
       >
